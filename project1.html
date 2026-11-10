@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corporate Bond Yields – Adiba Nayla Savitri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Pinyon+Script&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="project-page">
+  <a href="index.html#work" class="back-link">&larr; Back to Portfolio</a>
+  
+  <div class="project-header">
+    <p class="pj-num">( 01 )</p>
+    <h1 class="hand">Corporate Bond Yields</h1>
+    <p class="pj-tag">Financial econometrics</p>
+  </div>
+
+  <div class="project-body">
+    <h2>Problem Statement</h2>
+    <p>How do macroeconomic factors (SBI rate, exchange rate, inflation) and firm-specific factors (firm size, DER) affect corporate bond yields in Indonesia? Understanding this is crucial for investors to manage risk and for companies to determine optimal bond issuance pricing.</p>
+
+    <h2>Methodology</h2>
+    <p>The study utilized <strong>Multiple Linear Regression</strong> on a panel dataset. The data was collected from various corporate bonds listed on the Indonesia Stock Exchange (IDX) over a 5-year period. Assumption tests (normality, multicollinearity, heteroscedasticity) were conducted to ensure the model's validity.</p>
+    
+    <h2>Analysis & Output</h2>
+    <p>Here is the regression summary output generated from R:</p>
+    
+    <!-- CONTOH CARA MASUKIN GAMBAR/CHART -->
+    <div class="chart-container">
+      <img src="images/chart1.png" alt="Regression Output" onerror="this.src='https://via.placeholder.com/800x400?text=Masukkan+Gambar+Chart+Disini'; this.style.opacity='0.5';">
+      <p class="chart-caption">Figure 1: Multiple Linear Regression Summary Output</p>
+    </div>
+
+    <p>Berdasarkan output di atas, variabel SBI Rate dan Exchange Rate memiliki p-value < 0.05, yang berarti signifikan secara statistik.</p>
+
+    <h2>Results & Insight</h2>
+    <ul>
+      <li><strong>SBI Rate:</strong> Berpengaruh positif signifikan. Kenaikan suku bunga acuan membuat yield obligasi ikut naik untuk mengompensasi risiko.</li>
+      <li><strong>Exchange Rate:</strong> Berpengaruh positif signifikan. Depresiasi Rupiah meningkatkan kekhawatiran investor terhadap inflasi, sehingga menuntut yield yang lebih tinggi.</li>
+      <li><strong>Firm Size:</strong> Berpengaruh negatif. Perusahaan besar dianggap lebih aman (low risk), sehingga yield yang ditawarkan lebih rendah.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Investors should closely monitor central bank policies and currency stability, as these macro variables are the main drivers of bond yield fluctuations. For corporations, maintaining a strong balance sheet (large firm size) is key to lowering borrowing costs.</p>
+  </div>
+</div>
+
+</body>
+</html>

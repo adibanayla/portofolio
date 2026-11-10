@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Underdeveloped Areas in NTT & NTB – Adiba Nayla Savitri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Pinyon+Script&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="project-page">
+  <a href="index.html#work" class="back-link">&larr; Back to Portfolio</a>
+  
+  <div class="project-header">
+    <p class="pj-num">( 06 )</p>
+    <h1 class="hand">Underdeveloped Areas in NTT &amp; NTB</h1>
+    <p class="pj-tag">Firth logistic regression · Spatial classification</p>
+  </div>
+
+  <div class="project-body">
+    <h2>Problem Statement</h2>
+    <p>Development inequality in Eastern Indonesia, particularly in East Nusa Tenggara (NTT) and West Nusa Tenggara (NTB), remains a critical challenge. This study aims to model the probability and evaluate the classification accuracy of underdeveloped regions in these provinces using Firth's Penalized Logistic Regression.</p>
+    <p>The main methodological challenge in this study is the <strong>perfect separation</strong> problem, which frequently occurs in small-sample regional datasets, causing standard Maximum Likelihood Estimation (MLE) to fail to converge.</p>
+
+    <h2>Methodology & Data</h2>
+    <p>The analysis utilizes secondary data from 32 regencies/cities (29 regencies and 3 cities) across NTT and NTB. The dependent variable (Y) represents the regional status (1 = Underdeveloped, 0 = Developed). Initially, 8 predictor variables (X) were tested, covering infrastructure, education, economy, and health dimensions.</p>
+    <p>To handle perfect separation, the study applies <strong>Firth's Penalized Likelihood</strong>, which corrects the bias in parameter estimation. Variable selection was performed using Variance Inflation Factor (VIF) to eliminate multicollinearity, reducing the predictors to 2 significant variables in the final model.</p>
+
+    <h2>Analysis & Output</h2>
+    <p>Below are the key visual outputs from the analysis (generated using R):</p>
+    
+    <div class="chart-container">
+      <!-- GANTI src DENGAN GAMBAR PLOT LINIERITAS DARI PDF KAMU -->
+      <img src="assets/plot-linieritas.png" alt="Linearity Plot" onerror="this.src='https://via.placeholder.com/800x400?text=Screenshot+Gambar+1+Plot+Linieritas'; this.style.opacity='0.5';">
+      <p class="chart-caption">Figure 1: Component + Residual Plot (CR Plots) to verify linearity assumption.</p>
+    </div>
+
+    <p>Setelah melewati uji multikolinearitas dan linearitas, model akhir direduksi menjadi dua variabel yang terbukti signifikan dan bebas dari masalah multikolinearitas.</p>
+
+    <div class="chart-container">
+      <!-- GANTI src DENGAN GAMBAR KURVA ROC DARI PDF KAMU -->
+      <img src="assets/" alt="ROC Curve" onerror="this.src='https://via.placeholder.com/600x400?text=Screenshot+Gambar+2+Kurva+ROC'; this.style.opacity='0.5';">
+      <p class="chart-caption">Figure 2: Receiver Operating Characteristic (ROC) Curve showing an AUC of 0.972.</p>
+    </div>
+
+    <div class="chart-container">
+      <!-- GANTI src DENGAN GAMBAR PROBABILITAS DARI PDF KAMU -->
+      <img src="images/kurva-probabilitas.png" alt="Probability Curve" onerror="this.src='https://via.placeholder.com/800x400?text=Screenshot+Gambar+3+Kurva+Probabilitas'; this.style.opacity='0.5';">
+      <p class="chart-caption">Figure 3: Probability of a region being underdeveloped based on Poverty (X4) and Expected Years of Schooling (X6).</p>
+    </div>
+
+    <h2>Results & Insights</h2>
+    <p>The final Firth Logistic Regression model demonstrated excellent performance with a <strong>McFadden Pseudo R-Square of 71.23%</strong>, a <strong>classification accuracy of 87.5%</strong>, and a very high <strong>AUC score of 0.972</strong>.</p>
+    <ul>
+      <li><strong>Poverty Percentage (X4):</strong> Has a significant positive effect. The odds ratio of 1.412 indicates that for every 1% increase in the poverty rate, the odds of a region being underdeveloped increases by 1.412 times.</li>
+      <li><strong>Expected Years of Schooling (X6):</strong> Has a significant negative effect. An increase of one year in expected schooling reduces the odds of a region being underdeveloped to 0.095 times. Higher educational opportunities significantly minimize the likelihood of a region remaining underdeveloped.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Alleviating regional underdevelopment in NTT and NTB requires policy interventions that focus on <strong>direct economic poverty reduction</strong>, balanced with the continuous <strong>expansion of educational access and quality</strong>. These two factors are the most robust predictors in classifying regional status.</p>
+  </div>
+</div>
+
+</body>
+</html>
